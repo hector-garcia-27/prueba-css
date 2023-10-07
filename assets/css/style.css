@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    border: solid 1px black;
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+nav{
+    grid-area: nav;
+}
+
+.sec1{
+    grid-area: sec1;
+}
+
+.sec2{
+    grid-area: sec2;
+}
+
+.sec3{
+    grid-area: sec3;
+}
+
+footer{
+    grid-area: foot;
+}
