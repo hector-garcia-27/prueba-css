@@ -7,6 +7,16 @@
     border: solid 1px black;
 }
 
+.container{
+    grid-template-areas: 
+        "header"
+        "main"
+        "nav"
+        "sec1"
+        "sec2"
+        "sec3"
+        "foot"
+}
 /* header */
 
 header{
@@ -22,7 +32,7 @@ header > .logo > img{
 }
 
 header > .buscador{
-    display: flex;
+    display: none;
     border: solid 1px #ececec;
     padding: 3px;
 }
@@ -40,18 +50,87 @@ header > .menu-desktop{
     display: none;
 }
 
+/* main */
+
 main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     grid-area: main;
+    background-image: url(../img/fondo-tecnologico.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
 }
 
+main > .texto {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.6);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 70%;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+}
+
+main> .buscador{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(242, 242, 242, 0.464);
+    border-radius: 5px;
+}
+main > .buscador > img{
+    width: 25px;
+}
+    
+/* navbar */
 nav{
     grid-area: nav;
+    display: none;
 }
+
+nav > ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/* sec1 */
 
 .sec1{
     grid-area: sec1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
 }
 
+.sec1 > h3{
+    padding-bottom: 20px;
+}
+.sec1 > .grilla{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sec1 > .grilla > .card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: solid 1px black;
+    
+}
+
+/* sec2 */
 .sec2{
     grid-area: sec2;
 }
@@ -62,18 +141,4 @@ nav{
 
 footer{
     grid-area: foot;
-}
-
-@media (min-width: 576px){
-    header{
-        justify-content: space-between;
-    }
-
-    header > .networks{
-        display: flex;
-    }
-
-    header > .email{
-        display: flex;
-    }
 }
