@@ -58,7 +58,7 @@ main{
     align-items: center;
     justify-content: center;
     grid-area: main;
-    background-image: url(../img/fondo-tecnologico.jpg);
+    background-image: url(../img/fondo-tecnológico.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -133,10 +133,54 @@ nav > ul{
 /* sec2 */
 .sec2{
     grid-area: sec2;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
 }
 
+.sec2 > .titulo{
+    padding: 10px;
+}
+.sec2 > .parrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 10px;
+}
+
+.sec2 > .suscription {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    justify-content: center;
+}
+
+.sec2 > .suscription > form {
+    padding: 3px;
+}
+
+/* sec3 */
 .sec3{
     grid-area: sec3;
+    display: flex;
+    flex-direction: column; 
+}
+
+.sec3 > .envios > .caja {
+    border: solid 1px black;
+    display: flex;
+}
+
+.sec3 > .envios > .caja > .parrafo{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+}
+
+.sec3 > .envios > .caja > .parrafo > .tittle-descp{
+    border: solid 1px black;
 }
 
 footer{
