@@ -1,14 +1,13 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;500&display=swap');
+
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.box{
-    border: solid 1px black;
-}
-
-.container{
-    grid-template-areas: 
+.container {
+    grid-template-areas:
         "header"
         "main"
         "nav"
@@ -17,42 +16,48 @@
         "sec3"
         "foot"
 }
+
 /* header */
 
-header{
+header {
     grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header > .logo > img{
+header>.logo>img {
     width: 100px;
     padding-left: 10px;
 }
 
-header > .buscador{
+header>.cart>img {
+    width: 40px;
+    padding-left: 20px;
+}
+
+header>.buscador {
     display: none;
     border: solid 1px #ececec;
     padding: 3px;
 }
 
-header > .buscador > .icono{
+header>.buscador>.icono {
     width: 25px;
 }
 
-header > .menu > img{
+header>.menu>img {
     width: 35px;
     padding-right: 20px;
 }
 
-header > .menu-desktop{
+header>.menu-desktop {
     display: none;
 }
 
 /* main */
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +70,7 @@ main{
     height: auto;
 }
 
-main > .texto {
+main>.texto {
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0, 0.6);
@@ -78,7 +83,7 @@ main > .texto {
     margin: 10px;
 }
 
-main> .buscador{
+main>.buscador {
     display: flex;
     align-items: center;
     margin: 5px;
@@ -86,13 +91,14 @@ main> .buscador{
     background-color: rgba(242, 242, 242, 0.464);
     border-radius: 5px;
 }
-main > .buscador > img{
+
+main>.buscador>img {
     width: 25px;
 }
 
 /* sec1 */
 
-.sec1{
+.sec1 {
     grid-area: sec1;
     display: flex;
     flex-direction: column;
@@ -100,107 +106,131 @@ main > .buscador > img{
     align-items: center;
 }
 
-.sec1 > h3{
+.sec1>h3 {
     padding-bottom: 20px;
 }
-.sec1 > .grilla{
+
+.sec1>.grilla {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
-.sec1 > .grilla > .card{
+.sec1>.grilla>.card {
     display: flex;
     flex-direction: column;
+    text-align: center;
     width: 300px;
-    border: solid 1px black;
-    
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.sec1>.grilla>.card>.precio {
+    display: flex;
+    padding: 15px 20px 0px 0px;
+    justify-content: end;
+}
+
+.sec1>.grilla>.card>img {
+    background-size: cover;
+    margin-bottom: 15px;
+}
+
+.sec1>.grilla>.card>button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    visibility: hidden;
 }
 
 /* sec2 */
-.sec2{
+.sec2 {
     grid-area: sec2;
     display: flex;
     text-align: center;
     justify-content: space-around;
+    align-items: center;
     background-color: black;
     color: white;
 }
 
-.sec2 > .titulo{
+.sec2>.titulo {
     padding: 10px;
 }
-.sec2 > .parrafo{
+
+.sec2>.parrafo {
     display: flex;
     flex-direction: column;
     align-items: end;
     padding: 10px;
 }
 
-.sec2 > .suscription {
+.sec2>.suscription {
     display: flex;
     flex-direction: column;
     text-align: end;
     justify-content: center;
 }
 
-.sec2 > .suscription > form {
+.sec2>.suscription>form {
     padding: 3px;
 }
 
-/* sec3 */
-.sec3{
-    grid-area: sec3;
-    display: flex;
-    flex-direction: column; 
+.sec2>.suscription>form>input {
+    width: 120px;
 }
 
-.sec3 > .texto > h2{
+
+/* sec3 */
+.sec3 {
+    grid-area: sec3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.sec3>.texto>h2 {
     padding: 25px;
 }
 
-.sec3 > .envios > .caja {
+.sec3>.envios>.caja {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px;
-
 }
 
-.sec3 > .envios > .caja > .uno{
+.sec3>.envios>.caja>.uno {
     border: solid 1px black;
     width: 300px;
     padding: 10px;
     margin: 10px;
+    border-radius: 5px;
 }
 
-.sec3 > .envios > .caja > .dos{
-    display: flex;
-    align-items: end;
+.sec3>.envios>.caja>.dos {
     border: solid 1px black;
     width: 300px;
     padding: 10px;
     margin: 10px;
+    border-radius: 5px;
 }
 
-.sec3 > .envios > .caja > .uno > .parrafo{
+.sec3>.envios>.caja>.uno>.parrafo {
     display: flex;
     flex-direction: column;
 }
 
-.sec3 > .envios > .caja > .dos > .parrafo{
+.sec3>.envios>.caja>.dos>.parrafo {
     display: flex;
     flex-direction: column;
 }
 
-.sec3 > .envios > .caja > .uno > .parrafo > .tittle-descp{
-}
-
-.sec3 > .envios > .caja > .dos > .parrafo > .tittle-descp{
-}
-
-footer{
+footer {
     grid-area: foot;
     display: flex;
     flex-direction: column;
@@ -208,85 +238,85 @@ footer{
     background-color: black;
 }
 
-footer > .contacto {
+footer>.contacto {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-footer > .contacto > .icono{
+footer>.contacto>.icono {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
 }
 
-footer > .contacto > .icono > img{
+footer>.contacto>.icono>img {
     width: 60px;
     filter: invert(100%) sepia(9%) saturate(263%) hue-rotate(274deg) brightness(115%) contrast(100%);
 }
 
-footer > .politica{
+footer>.politica {
     display: flex;
     align-items: start;
     justify-content: space-around;
     padding: 10px;
 }
 
-footer > .politica > .info{
+footer>.politica>.info {
     display: flex;
     flex-direction: column;
 }
 
-footer > .politica > .info > h3{
+footer>.politica>.info>h3 {
     padding: 10px;
 }
 
-footer > .politica > .info > ul > li{
+footer>.politica>.info>ul>li {
     list-style: none;
 }
 
-footer > .politica > .info-redes{
+footer>.politica>.info-redes {
     display: flex;
     flex-direction: column;
 }
 
-footer > .politica > .info-redes > h3{
+footer>.politica>.info-redes>h3 {
     padding: 10px;
 }
 
-footer > .politica > .info-redes > .pag{
+footer>.politica>.info-redes>.pag {
     display: flex;
     flex-direction: column;
 }
 
-footer > .politica > .info-redes > .pag > .icono{
+footer>.politica>.info-redes>.pag>.icono {
     display: flex;
 }
 
-footer > .politica > .info-redes > .pag > .icono > img{
+footer>.politica>.info-redes>.pag>.icono>img {
     width: 30px;
     filter: invert(100%) sepia(9%) saturate(263%) hue-rotate(274deg) brightness(115%) contrast(100%);
 }
 
-footer > .redes{
+footer>.redes {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
 }
 
-footer > .redes > .icono{
+footer>.redes>.icono {
     display: flex;
     justify-content: center;
 }
 
-footer > .redes > .icono > img{
+footer>.redes>.icono>img {
     width: 50px;
     filter: invert(100%) sepia(9%) saturate(263%) hue-rotate(274deg) brightness(115%) contrast(100%);
     padding: 15px 15px 15px 15px
 }
 
-footer > .icono-final > img{
+footer>.icono-final>img {
     width: 200px;
 }
