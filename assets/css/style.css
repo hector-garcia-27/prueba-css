@@ -89,18 +89,6 @@ main> .buscador{
 main > .buscador > img{
     width: 25px;
 }
-    
-/* navbar */
-nav{
-    grid-area: nav;
-    display: none;
-}
-
-nav > ul{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
 
 /* sec1 */
 
@@ -168,21 +156,137 @@ nav > ul{
     flex-direction: column; 
 }
 
-.sec3 > .envios > .caja {
-    border: solid 1px black;
-    display: flex;
+.sec3 > .texto > h2{
+    padding: 25px;
 }
 
-.sec3 > .envios > .caja > .parrafo{
+.sec3 > .envios > .caja {
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
+    width: 100%;
+    gap: 10px;
+
 }
 
-.sec3 > .envios > .caja > .parrafo > .tittle-descp{
+.sec3 > .envios > .caja > .uno{
     border: solid 1px black;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sec3 > .envios > .caja > .dos{
+    display: flex;
+    align-items: end;
+    border: solid 1px black;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sec3 > .envios > .caja > .uno > .parrafo{
+    display: flex;
+    flex-direction: column;
+}
+
+.sec3 > .envios > .caja > .dos > .parrafo{
+    display: flex;
+    flex-direction: column;
+}
+
+.sec3 > .envios > .caja > .uno > .parrafo > .tittle-descp{
+}
+
+.sec3 > .envios > .caja > .dos > .parrafo > .tittle-descp{
 }
 
 footer{
     grid-area: foot;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+}
+
+footer > .contacto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer > .contacto > .icono{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+footer > .contacto > .icono > img{
+    width: 60px;
+    filter: invert(100%) sepia(9%) saturate(263%) hue-rotate(274deg) brightness(115%) contrast(100%);
+}
+
+footer > .politica{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+footer > .politica > .info{
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .politica > .info > h3{
+    padding: 10px;
+}
+
+footer > .politica > .info > ul > li{
+    list-style: none;
+}
+
+footer > .politica > .info-redes{
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .politica > .info-redes > h3{
+    padding: 10px;
+}
+
+footer > .politica > .info-redes > .pag{
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .politica > .info-redes > .pag > .icono{
+    display: flex;
+}
+
+footer > .politica > .info-redes > .pag > .icono > img{
+    width: 30px;
+    filter: invert(100%) sepia(9%) saturate(263%) hue-rotate(274deg) brightness(115%) contrast(100%);
+}
+
+footer > .redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+footer > .redes > .icono{
+    display: flex;
+    justify-content: center;
+}
+
+footer > .redes > .icono > img{
+    width: 50px;
+    filter: invert(100%) sepia(9%) saturate(263%) hue-rotate(274deg) brightness(115%) contrast(100%);
+    padding: 15px 15px 15px 15px
+}
+
+footer > .icono-final > img{
+    width: 200px;
 }
